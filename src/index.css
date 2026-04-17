@@ -1,9 +1,24 @@
+RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FULL WIDTH ROOT */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
 
+/* stylelint-disable unknownAtRules */
 @custom-variant dark (&:is(.dark *));
+/* stylelint-enable unknownAtRules */
 
 @theme inline {
     --font-heading: var(--font-sans);
@@ -123,6 +138,7 @@
     }
   body {
     @apply bg-background text-foreground;
+   
     }
   html {
     @apply font-sans;
